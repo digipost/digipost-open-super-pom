@@ -160,7 +160,7 @@
 			<timezone>+1</timezone>
 		</developer>
 		<developer>
-			<id>Espenhh</id>
+			<id>espenhh</id>
 			<name>Espen Herseth Halvorsen</name>
 			<email>espen.herseth.halvorsen (AT) BEKK.no</email>
 			<roles>
@@ -239,12 +239,42 @@
 			<organization>BEKK</organization>
 			<timezone>+1</timezone>
 		</developer>
+		<developer>
+			<id>oyvindn</id>
+			<name>Øyvind Nerbråten</name>
+			<email>oyvind.nerbraten (AT) BEKK.no</email>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<organization>BEKK</organization>
+			<timezone>+1</timezone>
+		</developer>
+                <developer>
+                        <id>SindreNordbo</id>
+                        <name>Sindre Nordbø</name>
+                        <email>sindre.nordbo (AT) BEKK.no</email>
+                        <roles>
+                                <role>Developer</role>
+                        </roles>
+                        <organization>BEKK</organization>
+                        <timezone>+1</timezone>
+                </developer>
+                <developer>
+                        <id>larseliassen</id>
+                        <name>Lars Eliassen</name>
+                        <email>lars.eliassen (AT) BEKK.no</email>
+                        <roles>
+                                <role>Developer</role>
+                        </roles>
+                        <organization>BEKK</organization>
+                        <timezone>+1</timezone>
+                </developer>
 	</developers>
 	<properties>
 		<!-- Plugin versions -->
-		<release-plugin.version>2.0-beta-9</release-plugin.version>
-		<gpg-plugin.version>1.1</gpg-plugin.version>
+		<release-plugin.version>2.4.1</release-plugin.version>
+		<gpg-plugin.version>1.4</gpg-plugin.version>
 		<!-- Extension versions -->
-		<wagon-webdav-jackrabbit.version>1.0</wagon-webdav-jackrabbit.version>
+		<wagon-webdav-jackrabbit.version>2.4</wagon-webdav-jackrabbit.version>
 	</properties>
 </project>
