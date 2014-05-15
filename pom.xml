@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>no.digipost</groupId>
 	<artifactId>digipost-open-super-pom</artifactId>
-	<version>0.3-SNAPSHOT</version>
+	<version>0.3</version>
 	<packaging>pom</packaging>
 	<name>Super POM for Digipost open source</name>
 	<url>https://api.digipost.no</url>
@@ -79,7 +79,7 @@
 		<connection>scm:git:git@github.com:digipost/digipost-open-super-pom.git</connection>
 		<developerConnection>scm:git:git@github.com:digipost/digipost-open-super-pom.git</developerConnection>
 		<url>scm:git:git@github.com:digipost/digipost-open-super-pom</url>
-	  <tag>HEAD</tag>
+	  <tag>digipost-open-super-pom-0.3</tag>
   </scm>
 	<distributionManagement>
 		<repository>
