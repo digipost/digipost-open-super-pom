@@ -17,14 +17,14 @@
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
-		<version>7</version>
+		<version>9</version>
 	</parent>
 	<build>
 		<extensions>
 			<extension>
 				<groupId>org.apache.maven.wagon</groupId>
 				<artifactId>wagon-webdav-jackrabbit</artifactId>
-				<version>${wagon-webdav-jackrabbit.version}</version>
+				<version>2.6</version>
 			</extension>
 		</extensions>
 		<pluginManagement>
@@ -32,7 +32,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
-					<version>${release-plugin.version}</version>
+					<version>2.5</version>
 					<configuration>
 						<scmCommentPrefix>Release:</scmCommentPrefix>
 					</configuration>
@@ -60,7 +60,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>${gpg-plugin.version}</version>
+						<version>1.5</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
@@ -129,153 +129,4 @@
 		<name>Digipost Open Source</name>
 		<url>http://github.com/digipost</url>
 	</organization>
-	<developers>
-		<developer>
-			<id>steinim</id>
-			<name>Stein Inge Morisbak</name>
-			<email>stein.inge.morisbak (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>froden</id>
-			<name>Frode Nerbråten</name>
-			<email>frode.nerbraten (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>eoftedal</id>
-			<name>Erlend Oftedal</name>
-			<email>erlend.oftedal (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>espenhh</id>
-			<name>Espen Herseth Halvorsen</name>
-			<email>espen.herseth.halvorsen (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>gustav80</id>
-			<name>Gustav Karlsson</name>
-			<email>gustav.karlsson (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>hjuva</id>
-			<name>Henning Juva</name>
-			<email>henning.juva (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>landro</id>
-			<name>Stefan Landrø</name>
-			<email>stefan.landro (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>olav</id>
-			<name>Olav Bjørkøy</name>
-			<email>olav.bjorkoy (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>taral</id>
-			<name>Taral Seierstad</name>
-			<email>taral.seierstad (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>tor-kleiberg</id>
-			<name>Tor Ørjan Kleiberg</name>
-			<email>tor.kleiberg (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>janniche</id>
-			<name>Janniche Haugen</name>
-			<email>janniche.haugen (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>oyvindn</id>
-			<name>Øyvind Nerbråten</name>
-			<email>oyvind.nerbraten (AT) BEKK.no</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<organization>BEKK</organization>
-			<timezone>+1</timezone>
-		</developer>
-                <developer>
-                        <id>SindreNordbo</id>
-                        <name>Sindre Nordbø</name>
-                        <email>sindre.nordbo (AT) BEKK.no</email>
-                        <roles>
-                                <role>Developer</role>
-                        </roles>
-                        <organization>BEKK</organization>
-                        <timezone>+1</timezone>
-                </developer>
-                <developer>
-                        <id>larseliassen</id>
-                        <name>Lars Eliassen</name>
-                        <email>lars.eliassen (AT) BEKK.no</email>
-                        <roles>
-                                <role>Developer</role>
-                        </roles>
-                        <organization>BEKK</organization>
-                        <timezone>+1</timezone>
-                </developer>
-	</developers>
-	<properties>
-		<!-- Plugin versions -->
-		<release-plugin.version>2.4.1</release-plugin.version>
-		<gpg-plugin.version>1.4</gpg-plugin.version>
-		<!-- Extension versions -->
-		<wagon-webdav-jackrabbit.version>2.4</wagon-webdav-jackrabbit.version>
-	</properties>
 </project>
