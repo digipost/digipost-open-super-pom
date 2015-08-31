@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.digipost</groupId>
     <artifactId>digipost-open-super-pom</artifactId>
-    <version>1-SNAPSHOT</version>
+    <version>1</version>
     <packaging>pom</packaging>
 
     <name>Digipost Open Source Project</name>
@@ -83,7 +83,7 @@
         <connection>scm:git:git@github.com:digipost/digipost-open-super-pom.git</connection>
         <developerConnection>scm:git:git@github.com:digipost/digipost-open-super-pom.git</developerConnection>
         <url>scm:git:git@github.com:digipost/digipost-open-super-pom</url>
-        <tag>HEAD</tag>
+        <tag>1</tag>
     </scm>
 
     <distributionManagement>
