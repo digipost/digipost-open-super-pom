@@ -17,6 +17,15 @@
         </license>
     </licenses>
 
+    <developers>
+        <developer>
+            <name>Rune Flobakk</name>
+            <url>https://github.com/digipost</url>
+            <organization>Digipost</organization>
+            <organizationUrl>https://digipost.no</organizationUrl>
+        </developer>
+    </developers>
+
     <build>
         <pluginManagement>
             <plugins>
