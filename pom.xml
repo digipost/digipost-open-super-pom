@@ -42,6 +42,8 @@
                         <mavenExecutorId>forked-path</mavenExecutorId>
                         <useReleaseProfile>false</useReleaseProfile>
                         <releaseProfiles>build-sources-and-javadoc,sign-artifacts,git-push-reminder</releaseProfiles>
+                        <localCheckout>true</localCheckout>
+                        <pushChanges>false</pushChanges>
                         <scmCommentPrefix>Release:</scmCommentPrefix>
                         <tagNameFormat>@{project.version}</tagNameFormat>
                         <autoVersionSubmodules>true</autoVersionSubmodules>
