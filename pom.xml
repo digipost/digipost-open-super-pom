@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.digipost</groupId>
     <artifactId>digipost-open-super-pom</artifactId>
-    <version>remove-sonatype-parent-SNAPSHOT</version>
+    <version>2</version>
     <packaging>pom</packaging>
 
     <name>Digipost Open Source Project</name>
@@ -169,7 +169,7 @@
                                     <target>
                                         <echo>*************************************************************************************************************</echo>
                                         <echo> Remember to push to remote Git repository after release!</echo>
-                                        <echo/>
+                                        <echo />
                                         <echo> git push --follow-tags</echo>
                                         <echo>*************************************************************************************************************</echo>
                                     </target>
@@ -186,7 +186,7 @@
         <connection>scm:git:git@github.com:digipost/digipost-open-super-pom.git</connection>
         <developerConnection>scm:git:git@github.com:digipost/digipost-open-super-pom.git</developerConnection>
         <url>scm:git:git@github.com:digipost/digipost-open-super-pom</url>
-        <tag>HEAD</tag>
+        <tag>2</tag>
     </scm>
 
     <distributionManagement>
