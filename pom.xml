@@ -60,6 +60,7 @@
                     <version>3.0.1</version>
                     <configuration>
                         <doclint>all,-missing</doclint>
+                        <quiet>true</quiet>
                     </configuration>
                 </plugin>
                 <plugin>
