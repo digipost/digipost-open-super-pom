@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.digipost</groupId>
     <artifactId>digipost-open-super-pom</artifactId>
-    <version>3-SNAPSHOT</version>
+    <version>4-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Digipost Open Source Project</name>
@@ -44,7 +44,7 @@
                         <releaseProfiles>build-sources-and-javadoc,sign-artifacts,git-push-reminder</releaseProfiles>
                         <localCheckout>true</localCheckout>
                         <pushChanges>false</pushChanges>
-                        <scmCommentPrefix>Release:</scmCommentPrefix>
+                        <scmCommentPrefix>[skip ci] Release: </scmCommentPrefix>
                         <tagNameFormat>@{project.version}</tagNameFormat>
                         <autoVersionSubmodules>true</autoVersionSubmodules>
                     </configuration>
@@ -59,14 +59,14 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>3.0.1</version>
+                    <version>3.1.0</version>
                     <configuration>
                         <includePom>true</includePom>
                     </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.0.1</version>
+                    <version>3.1.0</version>
                     <configuration>
                         <doclint>all,-missing</doclint>
                         <quiet>true</quiet>
