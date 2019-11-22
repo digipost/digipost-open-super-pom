@@ -56,6 +56,7 @@
                     <extensions>true</extensions>
                     <configuration>
                         <serverId>sonatype-oss-nexus-staging</serverId>
+                        <autoReleaseAfterClose>true</autoReleaseAfterClose>
                     </configuration>
                 </plugin>
                 <plugin>
