@@ -54,11 +54,6 @@
                     <artifactId>nexus-staging-maven-plugin</artifactId>
                     <version>1.6.8</version>
                     <extensions>true</extensions>
-                    <configuration>
-                        <serverId>sonatype-oss-nexus-staging</serverId>
-                        <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                        <skipStaging>true</skipStaging>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -120,6 +115,10 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <configuration>
+                            <serverId>sonatype-oss-nexus-staging</serverId>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
