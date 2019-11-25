@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.digipost</groupId>
     <artifactId>digipost-open-super-pom</artifactId>
-    <version>4-SNAPSHOT</version>
+    <version>5-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Digipost Open Source Project</name>
@@ -116,7 +116,7 @@
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
                         <configuration>
-                            <nexusUrl>https://oss.sonatype.org</nexusUrl>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <serverId>sonatype-oss-nexus-staging</serverId>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
