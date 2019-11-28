@@ -19,3 +19,4 @@ jobs:
           gpg_passphrase: ${{ secrets.gpg_passphrase }}
           ossrh_username: ${{ secrets.ossrh_username }}
           ossrh_password: ${{ secrets.ossrh_password }}
+          release_version: ${{ env.RELEASE_VERSION }}
