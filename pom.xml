@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.digipost</groupId>
     <artifactId>digipost-open-super-pom</artifactId>
-    <version>5-SNAPSHOT</version>
+    <version>0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Digipost Open Source Project</name>
