@@ -17,3 +17,4 @@ jobs:
         with:
           sonatype_secrets: ${{ secrets.sonatype_secrets }}
           release_version: ${{ env.RELEASE_VERSION }}
+          perform_release: true
