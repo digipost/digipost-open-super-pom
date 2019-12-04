@@ -1,3 +1,5 @@
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/no.digipost/digipost-open-super-pom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/no.digipost/digipost-open-super-pom)
+
 # Digipost Open Source Project &ndash; Super-POM
 
 Common configuration for
@@ -14,7 +16,7 @@ Add the following parent to your POM file:
 <parent>
     <groupId>no.digipost</groupId>
     <artifactId>digipost-open-super-pom</artifactId>
-    <version>2</version>
+    <version>6</version>
 </parent>
 ```
 
@@ -57,6 +59,17 @@ you probably want to add the following to your `<build>`-&gt;`<plugins>` section
 </plugin>
 ```
 
+## Release artifacts
+
+With this parent pom you can now release to Sonatype nexus with automatic close and release from staging 
+repository. This eliminates the need to manually logging in and click close and release. 
+
+To perform a release you need to set a version in the project. Either you use set it or if you have
+multiple modules, you can use `mvn versions:set -DnewVersion=$RELEASE_VERSION`.
+
+If you commit that change or not, that is up to you. We will in the future skip that commit.
+
+You can then perform the release: `mvn clean deploy --activate-profiles build-sources-and-javadoc,sign-artifacts,release`
 
 ## License
 
