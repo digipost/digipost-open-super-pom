@@ -16,7 +16,7 @@ Add the following parent to your POM file:
 <parent>
     <groupId>no.digipost</groupId>
     <artifactId>digipost-open-super-pom</artifactId>
-    <version>7</version>
+    <version>8</version>
 </parent>
 ```
 
