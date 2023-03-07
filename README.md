@@ -80,32 +80,20 @@ in `<pluginManagement>`:
 This POM contains base config for [japicmp-maven-plugin](https://siom79.github.io/japicmp/) which can be used to
 generate a report showing API changes and how you should version a new release. This config is not active by default,
 but contained in the profile named `japicmp`, and you may want to complement the config by specifying which package
-to include in the report:
+to include in the report in `<pluginManagement>`:
 
 ```xml
-<profiles>
-    <profile>
-        <id>japicmp</id>
-        <build>
-            <defaultGoal>japicmp:cmp</defaultGoal>
-            <pluginManagement>
-                <plugins>
-                    <plugin>
-                        <groupId>com.github.siom79.japicmp</groupId>
-                        <artifactId>japicmp-maven-plugin</artifactId>
-                        <configuration>
-                            <parameter>
-                                <includes>
-                                    <include>no.digipost.signature</include>
-                                </includes>
-                            </parameter>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </pluginManagement>
-        </build>
-    </profile>
-</profiles>
+<plugin>
+  <groupId>com.github.siom79.japicmp</groupId>
+  <artifactId>japicmp-maven-plugin</artifactId>
+  <configuration>
+    <parameter>
+      <includes>
+        <include>no.digipost.signature</include>
+      </includes>
+    </parameter>
+  </configuration>
+</plugin>
 ```
 
 The report can be generated using the command:
