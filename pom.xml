@@ -208,6 +208,37 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>japicmp</id>
+            <properties>
+                <project.previousVersion>set_with_-Dproject.previousVersion=X.Y</project.previousVersion>
+            </properties>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>com.github.siom79.japicmp</groupId>
+                            <artifactId>japicmp-maven-plugin</artifactId>
+                            <version>0.17.2</version>
+                            <configuration>
+                                <oldVersion>
+                                    <dependency>
+                                        <groupId>${project.groupId}</groupId>
+                                        <artifactId>${project.artifactId}</artifactId>
+                                        <version>${project.previousVersion}</version>
+                                    </dependency>
+                                </oldVersion>
+                                <parameter>
+                                    <onlyModified>true</onlyModified>
+                                    <onlyBinaryIncompatible>true</onlyBinaryIncompatible>
+                                    <ignoreMissingOptionalDependency>true</ignoreMissingOptionalDependency>
+                                </parameter>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
     </profiles>
 
     <scm>
