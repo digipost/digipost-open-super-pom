@@ -16,7 +16,7 @@ Add the following parent to your POM file:
 <parent>
     <groupId>no.digipost</groupId>
     <artifactId>digipost-open-super-pom</artifactId>
-    <version>11</version>
+    <version>12</version>
 </parent>
 ```
 
@@ -48,8 +48,8 @@ Add profile (or append separated with a `,`) in `.mvn/maven.config`:
 ## Check license headers in source files
 
 Add the contents you would like to use as a license header in your source files
-to the file `src/main/license-header.txt`, and enable the profile
-`check-license-header` in your build.
+to the file `src/main/license-header.txt` (e.g. [this](examples/license-header.txt)),
+and enable the profile `check-license-header` in your build.
 
 Add profile (or append separated with a `,`) in `.mvn/maven.config`:
 ```
@@ -74,6 +74,23 @@ in `<pluginManagement>`:
   </configuration>
 </plugin>
 ```
+
+
+## Generate and check NOTICE file
+
+Add the template you would like to use for a
+[NOTICE](https://www.apache.org/licenses/LICENSE-2.0.html#redistribution) file
+to be included in the repository to `src/NOTICE.template`. E.g. [this](examples/NOTICE.template).
+
+Add the profile `include-NOTICE` (or append separated with `,`) in `.mvn/maven.config`:
+```
+-P include-NOTICE
+```
+
+Generate NOTICE file with the command `mvn notice:generate` (this should be committed
+to the repository). The build will include `notice:check` which validates that the
+NOTICE file is up to date according to dependencies of the project.
+
 
 ## Generate report on API changes
 

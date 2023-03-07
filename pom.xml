@@ -270,6 +270,42 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>include-NOTICE</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.jasig.maven</groupId>
+                            <artifactId>notice-maven-plugin</artifactId>
+                            <version>2.0.0</version>
+                            <configuration>
+                                <excludeOptional>true</excludeOptional>
+                                <excludeScopes>
+                                    <excludeScope>test</excludeScope>
+                                </excludeScopes>
+                                <noticeTemplate>src/NOTICE.template</noticeTemplate>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jasig.maven</groupId>
+                        <artifactId>notice-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>check-NOTICE-file</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 
     <scm>
