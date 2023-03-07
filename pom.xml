@@ -221,6 +221,55 @@
                 </pluginManagement>
             </build>
         </profile>
+        <profile>
+            <id>check-license-header</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>com.mycila</groupId>
+                            <artifactId>license-maven-plugin</artifactId>
+                            <version>4.2.rc3</version>
+                            <configuration>
+                                <strictCheck>true</strictCheck>
+                                <failIfMissing>true</failIfMissing>
+                                <failIfUnknown>true</failIfUnknown>
+                                <mapping>
+                                    <xjb>XML_STYLE</xjb>
+                                </mapping>
+                                <licenseSets>
+                                    <licenseSet>
+                                        <header>src/license-header.txt</header>
+                                        <excludes combine.children="append">
+                                            <exclude>NOTICE</exclude>
+                                            <exclude>LICENSE</exclude>
+                                            <exclude>src/NOTICE.template</exclude>
+                                            <exclude>.mvn/maven.config</exclude>
+                                            <exclude>.java-version</exclude>
+                                            <exclude>.github/**/*.yml</exclude>
+                                        </excludes>
+                                    </licenseSet>
+                                </licenseSets>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+                <plugins>
+                    <plugin>
+                        <groupId>com.mycila</groupId>
+                        <artifactId>license-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>check-license-header</id>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 
     <scm>

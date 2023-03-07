@@ -39,11 +39,41 @@ the file `.mvn/maven.config` in your project with the following content:
 You can enable the profile `dependency-analyze` to include maven-dependency-plugin in your
 build, configured to check if your declared dependencies match with what is actually used.
 
-Add (or append profile separated with a `,`) the profile in `.mvn/maven.config`:
+Add profile (or append separated with a `,`) in `.mvn/maven.config`:
 ```
 -P dependency-analyze
 ```
 
+
+## Check license headers in source files
+
+Add the contents you would like to use as a license header in your source files
+to the file `src/main/license-header.txt`, and enable the profile
+`check-license-header` in your build.
+
+Add profile (or append separated with a `,`) in `.mvn/maven.config`:
+```
+-P check-license-header
+```
+
+You can also add additional excludes by configuring the license-maven-plugin
+in `<pluginManagement>`:
+```xml
+<plugin>
+  <groupId>com.mycila</groupId>
+  <artifactId>license-maven-plugin</artifactId>
+  <configuration>
+    <licenseSets>
+      <licenseSet>
+        <excludes>
+          <exclude>src/somthing/*.*</exclude>
+          <exclude>something/**/*</exclude>
+        </excludes>
+      </licenseSet>
+    </licenseSets>
+  </configuration>
+</plugin>
+```
 
 ## Generate report on API changes
 
@@ -87,8 +117,8 @@ mvn -Pjapicmp -Dproject.previousVersion=X.Y
 
 ## Release artifacts
 
-With this parent pom you can now release to Sonatype nexus with automatic close and release from staging 
-repository. This eliminates the need to manually logging in and click close and release. 
+With this parent pom you can now release to Sonatype nexus with automatic close and release from staging
+repository. This eliminates the need to manually logging in and click close and release.
 
 To perform a release you need to set a version in the project. Either you use set it or if you have
 multiple modules, you can use `mvn versions:set -DnewVersion=$RELEASE_VERSION`.
