@@ -16,7 +16,7 @@ Add the following parent to your POM file:
 <parent>
     <groupId>no.digipost</groupId>
     <artifactId>digipost-open-super-pom</artifactId>
-    <version>8</version>
+    <version>9</version>
 </parent>
 ```
 
@@ -33,31 +33,8 @@ the file `.mvn/maven.config` in your project with the following content:
 -P build-sources-and-javadoc
 ```
 
-This mechanism [requires at least Maven 3.3.1](https://maven.apache.org/docs/3.3.1/release-notes.html), and
-you probably want to add the following to your `<build>`-&gt;`<plugins>` section of your POM to ensure this:
+This mechanism [requires at least Maven 3.3.1](https://maven.apache.org/docs/3.3.1/release-notes.html).
 
-```xml
-<plugin>
-    <artifactId>maven-enforcer-plugin</artifactId>
-    <executions>
-        <execution>
-            <id>enforce-maven</id>
-            <goals>
-                <goal>enforce</goal>
-            </goals>
-            <configuration>
-                <rules>
-                    <requireMavenVersion>
-                        <!-- Maven 3.3.1 is needed for .mvn/maven.config to work
-                             https://maven.apache.org/docs/3.3.1/release-notes.html -->
-                        <version>3.3.1</version>
-                    </requireMavenVersion>
-                </rules>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
-```
 
 ## Generate report on API changes
 
