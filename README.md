@@ -33,7 +33,16 @@ the file `.mvn/maven.config` in your project with the following content:
 -P build-sources-and-javadoc
 ```
 
-This mechanism [requires at least Maven 3.3.1](https://maven.apache.org/docs/3.3.1/release-notes.html).
+
+## Analyze declared dependencies vs. actually used
+
+You can enable the profile `dependency-analyze` to include maven-dependency-plugin in your
+build, configured to check if your declared dependencies match with what is actually used.
+
+Add (or append profile separated with a `,`) the profile in `.mvn/maven.config`:
+```
+-P dependency-analyze
+```
 
 
 ## Generate report on API changes
