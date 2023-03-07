@@ -36,20 +36,6 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.3</version>
-                    <configuration>
-                        <mavenExecutorId>forked-path</mavenExecutorId>
-                        <useReleaseProfile>false</useReleaseProfile>
-                        <releaseProfiles>build-sources-and-javadoc,sign-artifacts,git-push-reminder</releaseProfiles>
-                        <localCheckout>true</localCheckout>
-                        <pushChanges>false</pushChanges>
-                        <scmCommentPrefix>[skip ci] Release: </scmCommentPrefix>
-                        <tagNameFormat>@{project.version}</tagNameFormat>
-                        <autoVersionSubmodules>true</autoVersionSubmodules>
-                    </configuration>
-                </plugin>
-                <plugin>
                     <groupId>org.sonatype.plugins</groupId>
                     <artifactId>nexus-staging-maven-plugin</artifactId>
                     <version>1.6.13</version>
@@ -171,36 +157,6 @@
                                         <arg>--pinentry-mode</arg>
                                         <arg>loopback</arg>
                                     </gpgArguments>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>git-push-reminder</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-antrun-plugin</artifactId>
-                        <version>1.8</version>
-                        <executions>
-                            <execution>
-                                <inherited>true</inherited>
-                                <id>git-push-reminder</id>
-                                <phase>deploy</phase>
-                                <goals>
-                                    <goal>run</goal>
-                                </goals>
-                                <configuration>
-                                    <target>
-                                        <echo>*************************************************************************************************************</echo>
-                                        <echo> Remember to push to remote Git repository after release!</echo>
-                                        <echo />
-                                        <echo> git push --follow-tags</echo>
-                                        <echo>*************************************************************************************************************</echo>
-                                    </target>
                                 </configuration>
                             </execution>
                         </executions>
