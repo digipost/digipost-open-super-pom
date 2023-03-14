@@ -192,12 +192,33 @@
         </profile>
         <profile>
             <id>japicmp</id>
-            <properties>
-                <project.previousVersion>set_with_-Dproject.previousVersion=X.Y</project.previousVersion>
-            </properties>
             <build>
+                <defaultGoal>enforcer:enforce@require-project.previousVersion japicmp:cmp</defaultGoal>
                 <pluginManagement>
                     <plugins>
+                        <plugin>
+                            <artifactId>maven-enforcer-plugin</artifactId>
+                            <executions>
+                                <execution>
+                                    <id>require-project.previousVersion</id>
+                                    <goals>
+                                        <goal>enforce</goal>
+                                    </goals>
+                                    <configuration>
+                                        <rules combine.self="override">
+                                            <requireProperty>
+                                                <property>project.previousVersion</property>
+                                                <message>
+                                                    Missing project.previousVersion property!
+                                                    You must specify the version you want to compare with. Add
+                                                    -Dproject.previousVersion=X.Y to set the version to compare against you current API.
+                                                </message>
+                                            </requireProperty>
+                                        </rules>
+                                    </configuration>
+                                </execution>
+                            </executions>
+                        </plugin>
                         <plugin>
                             <groupId>com.github.siom79.japicmp</groupId>
                             <artifactId>japicmp-maven-plugin</artifactId>
