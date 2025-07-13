@@ -2,3 +2,5 @@
 .settings/
 target/
 .idea/
+.vscode/settings.json
+.flattened-pom.xml
