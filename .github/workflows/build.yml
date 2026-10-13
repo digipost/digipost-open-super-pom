@@ -39,7 +39,7 @@ jobs:
           server-id: central
           server-username: MAVEN_CENTRAL_TOKEN_USERNAME
           server-password: MAVEN_CENTRAL_TOKEN_PASSWORD
-          gpg-passphrase: MAVEN_GPG_PASSPHRASE
+          gpg-passphrase-env-var: MAVEN_GPG_PASSPHRASE
       - name: Activate Artifact Signing and Version Suffix
         run: |
           profiles="build-sources-and-javadoc,deploy-to-maven-central"
