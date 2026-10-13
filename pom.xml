@@ -152,13 +152,13 @@
                             </execution>
                         </executions>
                     </plugin>
-                
+
                     <plugin>
                         <groupId>org.sonatype.central</groupId>
                         <artifactId>central-publishing-maven-plugin</artifactId>
                         <extensions>true</extensions>
                         <configuration>
-                            <publishingServerId>central</publishingServerId>
+                            <publishingServerId>sonatype-central</publishingServerId>
                             <autoPublish>true</autoPublish>
                         </configuration>
                     </plugin>
