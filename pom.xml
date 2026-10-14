@@ -26,29 +26,29 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.6.0</version>
+                    <version>3.6.3</version>
                     <configuration>
                         <rules>
                             <requireMavenVersion>
-                                <version>3.6.3</version>
+                                <version>3.8.1</version>
                             </requireMavenVersion>
                         </rules>
                     </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.8.1</version>
+                    <version>3.11.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.sonatype.central</groupId>
                     <artifactId>central-publishing-maven-plugin</artifactId>
-                    <version>0.8.0</version>
+                    <version>0.11.0</version>
                     <extensions>true</extensions>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
-                    <version>2.18.0</version>
+                    <version>2.23.0</version>
                     <configuration>
                         <generateBackupPoms>false</generateBackupPoms>
                     </configuration>
@@ -56,18 +56,18 @@
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>flatten-maven-plugin</artifactId>
-                    <version>1.7.2</version>
+                    <version>1.8.0</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>3.3.1</version>
+                    <version>3.4.0</version>
                     <configuration>
                         <includePom>true</includePom>
                     </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.11.2</version>
+                    <version>3.12.0</version>
                     <configuration>
                         <doclint>all,-missing</doclint>
                         <quiet>true</quiet>
@@ -79,11 +79,11 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
-                    <version>3.1.4</version>
+                    <version>3.2.0</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>3.1.4</version>
+                    <version>3.2.0</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -152,13 +152,13 @@
                             </execution>
                         </executions>
                     </plugin>
-                
+
                     <plugin>
                         <groupId>org.sonatype.central</groupId>
                         <artifactId>central-publishing-maven-plugin</artifactId>
                         <extensions>true</extensions>
                         <configuration>
-                            <publishingServerId>central</publishingServerId>
+                            <publishingServerId>sonatype-central</publishingServerId>
                             <autoPublish>true</autoPublish>
                         </configuration>
                     </plugin>
@@ -251,7 +251,7 @@
                         <plugin>
                             <groupId>com.github.siom79.japicmp</groupId>
                             <artifactId>japicmp-maven-plugin</artifactId>
-                            <version>0.17.2</version>
+                            <version>0.26.3</version>
                             <configuration>
                                 <oldVersion>
                                     <dependency>
@@ -279,7 +279,7 @@
                         <plugin>
                             <groupId>com.mycila</groupId>
                             <artifactId>license-maven-plugin</artifactId>
-                            <version>4.2.rc3</version>
+                            <version>5.1.2</version>
                             <configuration>
                                 <strictCheck>true</strictCheck>
                                 <failIfMissing>true</failIfMissing>
