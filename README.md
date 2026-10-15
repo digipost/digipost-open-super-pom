@@ -1,11 +1,12 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/no.digipost/digipost-open-super-pom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/no.digipost/digipost-open-super-pom)
+[![Maven Central Version](https://img.shields.io/maven-central/v/no.digipost/digipost-open-super-pom)](https://central.sonatype.com/artifact/no.digipost/digipost-open-super-pom)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/digipost/digipost-open-super-pom/build.yml)](https://github.com/digipost/digipost-open-super-pom/actions/workflows/build.yml)
+[![Apache 2.0 License](https://img.shields.io/github/license/digipost/digipost-open-super-pom?color=red)](LICENCE)
 
 # Digipost Open Source Project &ndash; Super-POM
 
-Common configuration for
-[Digipost open source projects](https://github.com/digipost). It enables deployment to
-[Sonatype's staging and snapshot repository](https://oss.sonatype.org), and provides
-some configuration of commonly used plugins.
+Common configuration for [Digipost open source projects](https://github.com/digipost).
+It enables deployment to [Sonatype's staging/snapshot and release repository](https://central.sonatype.com/),
+and provides some configuration of commonly used plugins.
 
 
 ## Usage
@@ -16,9 +17,13 @@ Add the following parent to your POM file:
 <parent>
     <groupId>no.digipost</groupId>
     <artifactId>digipost-open-super-pom</artifactId>
-    <version>12</version>
+    <version>16</version> <!-- or replace with newest -->
 </parent>
 ```
+
+Refer to [this repo's build.yml GitHub workflow](.github/workflows/build.yml) for how
+to set up publishing to Maven Central Repository using
+[Sonatype central-publishing-maven-plugin](https://central.sonatype.org/publish/publish-portal-maven/).
 
 
 ## Build source and javadoc artifacts

@@ -43,7 +43,7 @@ jobs:
           gpg-passphrase-env-var: MAVEN_GPG_PASSPHRASE
       - name: Activate Artifact Signing and Version Suffix
         run: |
-          profiles="build-sources-and-javadoc,deploy-to-maven-central"
+          profiles="deploy-to-maven-central"
           if [[ "${GITHUB_REF_TYPE}" == "tag" ]]; then
             profiles="$profiles,sign-artifacts"
             version_suffix=""
